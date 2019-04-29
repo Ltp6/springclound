@@ -25,7 +25,8 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="microservicecloud" />
+    <orderEntry type="module" module-name="microservicecloudapi" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.18" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-actuator:1.5.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:1.5.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:1.5.9.RELEASE" level="project" />
@@ -186,7 +187,5 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:1.5.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.5.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.5.9.RELEASE" level="project" />
-    <orderEntry type="module" module-name="microservicecloudapi" />
-    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.18" level="project" />
   </component>
 </module>

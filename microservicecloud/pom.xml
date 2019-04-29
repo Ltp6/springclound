@@ -11,6 +11,9 @@
         <module>microservicecloud-api</module>
         <module>microservicecloud-provider-dept-8001</module>
         <module>microservicecloud-consumer-dept-80</module>
+        <module>microservicecloud-eureka-7001</module>
+        <module>microservicecloud-eureka-7002</module>
+        <module>microservicecloud-eureka-7003</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -71,4 +74,27 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <!--父工程名称-->
+        <finalName>microservicecloud</finalName>
+        <resources>
+            <!--可以访问项目中resources文件夹下的文件-->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <!--读取所有以$符号开头和结尾的内容-->
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
