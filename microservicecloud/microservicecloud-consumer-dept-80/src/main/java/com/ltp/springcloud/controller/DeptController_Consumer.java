@@ -15,7 +15,8 @@ public class DeptController_Consumer {
      * (url,requestMap,ResponseBean.class)这三个参数分别代表
      * REST请求地址、请求参数、Http响应转换成的对象类型。
      * */
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+//    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    private static final String REST_URL_PREFIX = "http://MICROSERVICECLOUD-DEPT";
 
     @Autowired
     private RestTemplate restTemplate;
