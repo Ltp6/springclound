@@ -1,0 +1,32 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: gateway9527.com
+    prefer-ip-address: true        #访问路径可以显示IP地址
+
+info:
+  app.name: ltp-microservicecloud
+  company.name: https://github.com/Ltp6/springclound
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+
+zuul:
+  #设置访问前缀
+  prefix: /ltp
+  #忽略真实地址microservicecloud-dept，导致真实地址不能访问，屏蔽单个使用具体名称，屏蔽多个使用"*"
+  ignored-services: "*"
+  #真实地址映射
+  routes:
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
+
